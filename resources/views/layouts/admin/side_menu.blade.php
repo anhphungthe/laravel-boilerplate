@@ -34,44 +34,44 @@
             @role('superadmin')
             <li @if( $menu=='admin_users') class="active" @endif >
                 <a href="{!! URL::action('Admin\AdminUserController@index') !!}">
-                    <i class="fa fa-user-secret"></i> <span>Admin Users</span>
+                    <i class="fa fa-user-secret"></i> <span>Quản lý user admin</span>
                 </a>
             </li>
             
             <li @if( $menu=='users') class="active" @endif >
                 <a href="{!! URL::action('Admin\UserController@index') !!}">
-                    <i class="fa fa-users"></i> <span>Users</span>
+                    <i class="fa fa-users"></i> <span>Quản lý người dùng</span>
                 </a>
             </li>
             
             <li @if( $menu=='site_configurations') class="active" @endif >
                 <a href="{!! URL::action('Admin\SiteConfigurationController@index') !!}">
-                    <i class="fa fa-cogs"></i> <span>Site Configurations</span>
+                    <i class="fa fa-cogs"></i> <span>Cấu hình site</span>
                 </a>
             </li>
             @endrole
             
             <li @if( $menu=='article') class="active" @endif >
                 <a href="{!! URL::action('Admin\ArticleController@index') !!}">
-                    <i class="fa fa-file-word-o"></i> <span>Articles</span>
+                    <i class="fa fa-file-word-o"></i> <span>Quản lý bài viết</span>
                 </a>
             </li>
             
             <li @if( $menu=='user_notification') class="active" @endif >
                 <a href="{!! URL::action('Admin\UserNotificationController@index') !!}">
-                    <i class="fa fa-bell"></i> <span>UserNotifications</span>
+                    <i class="fa fa-bell"></i> <span>Quản lý thông báo người dùng</span>
                 </a>
             </li>
             
             <li @if( $menu=='admin_user_notification') class="active" @endif >
                 <a href="{!! URL::action('Admin\AdminUserNotificationController@index') !!}">
-                    <i class="fa fa-bell-o"></i> <span>AdminUserNotifications</span>
+                    <i class="fa fa-bell-o"></i> <span>Quản lý thông báo user admin</span>
                 </a>
             </li>
             
             <li @if( $menu=='image') class="active" @endif >
                 <a href="{!! URL::action('Admin\ImageController@index') !!}">
-                    <i class="fa fa-file-image-o"></i> <span>Images</span>
+                    <i class="fa fa-file-image-o"></i> <span>Quản lý ảnh</span>
                 </a>
             </li>
             <!-- %%SIDEMENU%% -->
