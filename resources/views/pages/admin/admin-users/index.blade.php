@@ -12,7 +12,7 @@
 @stop
 
 @section('title')
-    {{ config('site.name') }} | Admin | Admin Users
+    {{ config('site.name') }} | Admin Users
 @stop
 
 @section('header')
@@ -28,7 +28,6 @@
                        class="btn btn-block btn-primary btn-sm">@lang('admin.pages.common.buttons.create')</a>
                 </p>
             </h3>
-            {!! \PaginationHelper::render($offset, $limit, $count, $baseUrl, []) !!}
         </div>
         <div class="box-body scroll">
             <table class="table table-bordered">
@@ -38,22 +37,11 @@
                     <th>Email</th>
                     <th style="width: 40px"></th>
                 </tr>
-                @foreach( $adminUsers as $adminUser )
-                    <tr>
-                        <td>{{ $adminUser->id }}</td>
-                        <td>{{ $adminUser->name }}</td>
-                        <td>{{ $adminUser->email }}</td>
-                        <td>
-                            <a href="{!! URL::action('Admin\AdminUserController@show', [$adminUser->id]) !!}"
-                               class="btn btn-block btn-primary">Edit</a>
-                            <a href="#" class="btn btn-block btn-danger btn-sm delete-button" data-delete-url="{!! action('Admin\AdminUserController@destroy', $adminUser->id) !!}">@lang('admin.pages.common.buttons.delete')</a>
-                        </td>
-                    </tr>
-                @endforeach
+                
             </table>
         </div>
         <div class="box-footer">
-            {!! \PaginationHelper::render($offset, $limit, $count, $baseUrl, []) !!}
+
         </div>
     </div>
 @stop

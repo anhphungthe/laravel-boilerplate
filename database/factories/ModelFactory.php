@@ -112,4 +112,28 @@ $factory->define(App\Models\AdminUserNotification::class, function(Faker\Generat
     ];
 });
 
+$factory->define(App\Models\Channel::class, function (Faker\Generator $faker) {
+    return [
+        'Id' => '',
+        'ChannelId' => '',
+        'SiteId' => '',
+        'Name' => '',
+        'Url' => '',
+        'Order' => '',
+        'ParentId' => '',
+        'Status' => '',
+        'CreatedDate' => '',
+        'ModifiedDate' => '',
+        'CatId' => '',
+        'DisplayStyle' => '',
+        'ShowOnHome' => '',
+        'Invisibled' => '',
+        'Keyword' => '',
+        'ListNewsZoneId' => '',
+        'Avatar' => '',
+        'AvatarCover' => '',
+        'ZoneRelation' => '',
+    ];
+});
+
 /* NEW MODEL FACTORY */

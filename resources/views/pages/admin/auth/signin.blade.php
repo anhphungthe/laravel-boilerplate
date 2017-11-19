@@ -29,7 +29,7 @@ Sign In
 @section('content')
 <div class="login-box">
     <div class="login-logo">
-        <a href="{!! action('User\IndexController@index') !!}"><b>{{ config('site.name') }}</b> Admin</a>
+        <a href="#"><b>{{ config('site.name') }}</b></a>
     </div>
     <!-- /.login-logo -->
 

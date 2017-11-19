@@ -27,7 +27,8 @@
             <li class="header">Điều hướng</li>
             
             <li @if( $menu=='dashboard') class="active" @endif >
-                <a href="#"><i class="fa fa-dashboard"></i> <span>Bảng điều khiển</span>
+                <a href="{!! URL::action('Admin\IndexController@index') !!}">
+                    <i class="fa fa-dashboard"></i> <span>Bảng điều khiển</span>
                 </a>
             </li>
 
@@ -41,12 +42,6 @@
             <li @if( $menu=='users') class="active" @endif >
                 <a href="{!! URL::action('Admin\UserController@index') !!}">
                     <i class="fa fa-users"></i> <span>Quản lý người dùng</span>
-                </a>
-            </li>
-            
-            <li @if( $menu=='site_configurations') class="active" @endif >
-                <a href="{!! URL::action('Admin\RolePermissionController@index') !!}">
-                    <i class="fa fa-cogs"></i> <span>Quản lý quyền hạn</span>
                 </a>
             </li>
 

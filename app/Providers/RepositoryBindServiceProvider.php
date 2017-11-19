@@ -76,6 +76,16 @@ class RepositoryBindServiceProvider extends ServiceProvider
             \App\Repositories\Eloquent\AdminUserNotificationRepository::class
         );
 
+        $this->app->singleton(
+            \App\Repositories\ChannelInterface::class,
+            \App\Repositories\Eloquent\Channel::class
+        );
+
+        $this->app->singleton(
+            \App\Repositories\ChannelRepositoryInterface::class,
+            \App\Repositories\Eloquent\ChannelRepository::class
+        );
+
         /* NEW BINDING */
     }
 }

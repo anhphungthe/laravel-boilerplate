@@ -5,5 +5,5 @@
         Made by CMS Branding Team
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; {{ \DateTimeHelper::now()->format('Y') }} <a href="{!! URL::action('User\IndexController@index') !!}">{{ config('site.name') }}</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; {{ \DateTimeHelper::now()->format('Y') }} <a href="#">{{ config('site.name') }}</a>.</strong> All rights reserved.
 </footer>

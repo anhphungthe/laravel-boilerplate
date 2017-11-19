@@ -1,5 +1,9 @@
 <?php
 
+\Route::get('/', function () {
+    return redirect('/admin/dashboard');
+});
+
 \Route::group(['prefix' => 'admin', 'middleware' => ['admin.values']], function () {
 
     \Route::group(['middleware' => ['admin.guest']], function () {
@@ -12,7 +16,7 @@
     });
 
     \Route::group(['middleware' => ['admin.auth']], function () {
-        \Route::get('/', 'Admin\IndexController@index');
+        \Route::get('/dashboard', 'Admin\IndexController@index');
 
         \Route::get('/me', 'Admin\MeController@index');
         \Route::put('/me', 'Admin\MeController@update');
@@ -29,6 +33,7 @@
         \Route::delete('articles/images', 'Admin\ArticleController@deleteImage');
 
         \Route::resource('articles', 'Admin\ArticleController');
+        \Route::resource('channels', 'Admin\ChannelController');
         \Route::delete('images/delete', 'Admin\ImageController@deleteByUrl');
         \Route::resource('images', 'Admin\ImageController');
 

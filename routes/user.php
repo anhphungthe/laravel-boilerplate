@@ -1,7 +1,7 @@
 <?php
 
 \Route::group(['middleware' => ['user.values']], function () {
-    \Route::get('/', 'User\IndexController@index');
+    // \Route::get('/', 'User\IndexController@index');
 
     \Route::group(['middleware' => ['user.guest']], function () {
         \Route::get('signin', 'User\AuthController@getSignIn');
